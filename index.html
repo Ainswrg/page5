@@ -7,5 +7,12 @@
 </head>
 <body>
     <iframe id="frame" src="https://files.adriver.ru/z.daulenov/JS755/frame2.html" frameborder="0"></iframe>
+    <script>
+        window.addEventListener('message', (event) => {
+            if (event.source !== window.parent) return;
+            const data = event.data;
+            console.log("data: ", data);
+        });
+    </script>
 </body>
 </html>
