@@ -9,6 +9,7 @@
     <iframe id="frame" src="https://files.adriver.ru/z.daulenov/JS755/frame2.html" frameborder="0"></iframe>
     <script>
         window.addEventListener('message', (event) => {
+            console.log("event", event);
             console.log("event.source: ", event.source);
             console.log("window.parent: ", window.parent);
             if (event.source !== window.parent) return;
